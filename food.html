@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Foods</title>
+        <style>
+            body{
+                font-size: 20px;
+                font-family: sans-serif;
+                color: #102fac;
+                font-weight: bold;
+                padding: 0px 30px;
+                margin: 0px 30px;
+                background-image: url("food.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .home{
+                list-style-type: none;
+            }
+            .home .hme{
+                float: right;
+                color: blue;
+                font-size: 30px;
+            }
+            .home .hme:hover{
+                background-color: bisque;
+            }
+            input[type="submit"]{
+                height: 30px;
+                padding: 0px 60px;
+                font-size: 18px;
+                margin-left: 100px;
+                cursor: pointer;
+                background-color: green;
+                color: white;
+                border: none;
+                border-radius: 10px;
+            }
+            p{
+                font-size: 30px;
+            }
+            .Sea{
+                padding-left: 500px;
+                margin-top: -400px;
+            }
+        </style>
+    </head>
+    <body>
+        <li class="home"><a class="hme" href="file:///D:/HTML_Program/MyWebsite/Myprofile1.html">Home</a></li>
+        <h1 style="color: brown; font-size: 30px;">Veg or Non veg which one you like?</h1>
+        <p>Nonveg</p><br>
+        <form method="post">
+        <input type="checkbox"value="Grilled chicken Escalope">Grilled chicken Escalope<br>
+        <input type="checkbox"value="Mutton korma">Mutton korma<br>
+        <input type="checkbox"value="Malabar Fish Biriyani">Malabar Fish Biriyani<br>
+        <input type="checkbox"value="Keema samosa with Yoghurt dip">Keema samosa with Yoghurt dip<br>
+        <input type="checkbox"value="Curried parmesan Fish fingers">Curried parmesan Fish fingers<br>
+        <input type="checkbox"value="Chicken 65">Chiccken 65<br>
+        <input type="checkbox"value="Goan prawn curry raw mango">Goan prawn curry raw mango<br>
+        <input type="checkbox"value="Nihari gosht">Nihari gosht<br>
+        <input type="checkbox"value="Butter chicken">Butter chicken<br>
+        <input type="checkbox"value="Pina kolada pork ribs">Pina kolada pork ribs<br>
+        <input type="checkbox"value="Tandoori lamb chops">Tandoori lamb chops<br>
+        <input type="checkbox"value="Hyderabadi chicken Fry">Hyderabadi chicken Fry<br>
+        <input type="checkbox"value="Hyderabadi keema">Hyderabadi keema<br>
+        </form>
+        <div class="Sea">
+        <p>Veg</p><br>
+        <input type="checkbox"value="Aloo Tamator ka jhol">Aloo Tamator ka jhol<br>
+        <input type="checkbox"value="Tamarind rice">Tamarind rice<br>
+        <input type="checkbox"value="Jeera vagetables">Jeera vagetables<br>
+        <input type="checkbox"value="Southern style okra">Southern style okra<br>
+        <input type="checkbox"value="Indian stir fry">Indian stir fry<br>
+        <input type="checkbox"value="Butter paneer">Butter paneer<br>
+        <input type="checkbox"value="Veg vegetables sandwich">Veg vegetables sandwich<br>
+        <input type="checkbox"value="Pommes Gratin">Pommes Gratin<br>
+        <input type="checkbox"value="Vegetable pokoda">Vegetable pokoda<br>
+        <input type="checkbox"value="Basanti pulao">Basanti pulao<br>
+        <input type="checkbox"value="Green pea upma">Green pea upma<br>
+        <input type="checkbox"value="Vegetable Fried rice">Vegetable Fried rice<br>
+        <input type="checkbox"value="Oats idli">Oats idli<br>
+        <input type="checkbox"value="Kanda bhaji">Kanada bhaji<br>
+        <input type="checkbox"value="Dahi sandwich">Dahi sandwich<br>
+        <input type="checkbox"value="Others">Others
+        <input type="submit"value="Save" onclick="validation();">
+        </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+        <script>
+            function validation(){
+                swal("Thank You!", "Your record saved successfully!", "success");
+            }
+        </script>
+    </body>
+</html>

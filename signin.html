@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign in</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <style>
+            body{
+            background-image: url("nature.jpg");
+            font-family: sans-serif; 
+            color: wheat;
+            }
+            .home{
+                list-style-type: none;
+            }
+            .home .hme{
+                float: right;
+                color: #de1f8d;
+                font-size: 30px;
+            }
+            .home .hme:hover{
+                background-color: bisque;
+            }
+            div{
+                width: 350px;
+                height: 550px;
+                backface-visibility: visible;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                border: 0.5px solid black;
+                box-sizing: border-box;
+                padding: 70px 30px;
+                margin-top: 50px;
+            }
+            .profile{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                border-radius: 50%;
+                top: -50px;
+                left: calc(50% - 50px);
+            }
+            input[type]{
+                display: inline-block;
+                font-size: 15px;
+            }
+            .media{
+                list-style-type: none;
+                display: inline-flex;
+            }
+            li{
+                font-size: 30px;
+                text-align: center;
+                transform: translate(0px);
+                margin-left: 15px;
+            }
+            .signup{
+                display: inline-flex;
+            }
+            .sup{
+                color: #de1f8d;
+            }
+        </style>
+    </head>
+    <body>
+        <li class="home"><a class="hme" href="file:///D:/HTML_Program/MyWebsite/Myprofile1.html">Home</a></li>
+        <h1 style="text-align: center; padding-left: 40px;">Good to see you again!</h1>
+       <div>
+        <img src="profile.png" class="profile"> 
+        <p style="padding: -10px; margin: -10px; font-size: 30px; position: absolute;">Sign in</p>
+        <form style="padding-top: 70px;">
+            <label>Your email</label><br>
+            <input type="email" placeholder="Enter yuor email" style="border: none; border-radius: 8px; height:30px; width: 280px;" required><br><br><br>
+            <label>Your password<span style="color: red; font-size:15px">(must contain 8 digit)</span></label><br>
+            <input type="password" id="password" placeholder="**** ****" maxlength="8" minlength="8" style="border: none; border-radius: 8px; height: 30px; width: 280px;" required><br><br><br>
+            <form method="post" action="#">
+            <input type="submit" onclick="validation" value="Login" style="height: 30px; width: 280px; border: none; border-radius: 8px; margin-top: 20px; cursor: pointer; background-color: #6B3442; color: white;">
+            </form>   
+        </form>
+        <span>
+            <ul class="media">
+                <li class="fb"><a href="#"><i class="fa-brands fa-facebook-f" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color: blue; color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color: white; color: #de431f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color:blue; color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-apple" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color:white; color: black;"></i></a></li>
+            </ul>
+        </span>
+        <span class="signup">
+            <p>Don't have an account?</p>
+            <a class="sup" href="file:///D:/HTML_Program/MyWebsite/signup.html">Sign Up</a>
+        </span>
+       </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+       <script>
+        function validation(){
+            swal("Good job!", "You clicked the button!", "success");
+        }
+       </script>
+    </body>
+</html>

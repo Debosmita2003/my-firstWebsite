@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <style>
+            body{
+            background-image: url("nature2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: sans-serif; 
+            color: #175260;
+            }
+            .home{
+                list-style-type: none;
+            }
+            .home .hme{
+                float: right;
+                color: #de1f8d;
+                font-size: 30px;
+            }
+            .home .hme:hover{
+                background-color: bisque;
+            }
+            div{
+                width: 380px;
+                height: 600px;
+                backface-visibility: visible;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                border: 0.5px solid black;
+                box-sizing: border-box;
+                padding: 70px 30px;
+                margin-top: 50px;
+            }
+            .profile{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                border-radius: 50%;
+                top: -50px;
+                left: calc(50% - 50px);
+            }
+            input[type]{
+                display: inline-block;
+                font-size: 15px;
+            }
+            .media{
+                list-style-type: none;
+                display: inline-flex;
+            }
+            li{
+                font-size: 30px;
+                text-align: center;
+                transform: translate(0px);
+                margin-left: 15px;
+            }
+            .signin{
+                display: inline-flex;
+            }
+            .sin{
+                color: #de1f8d;
+            }
+            ::-webkit-validation-bubble-message{
+                  align-items: flex-start;
+            }
+        </style>
+    </head>
+    <body>
+        <li class="home"><a class="hme" href="file:///D:/HTML_Program/MyWebsite/Myprofile1.html">Home</a></li>
+       <h1 style="text-align: center;">Please fill in this form to create an account!</h1>
+       <div>
+        <img src="profile.png" class="profile"> 
+        <p style="padding: -10px; margin: -10px; font-size: 30px; position: absolute;">Sign up</p>
+        <form style="padding-top: 70px;">
+            <label>Your email</label><br>
+            <from method="get">
+            <input type="email" placeholder="Enter yuor email" style="border: none; border-radius: 8px; height:30px; width: 300px;" required><br><br><br>
+            </from>
+            <label>Your password<span style="color: red; font-size:15px">(must contain 8 digit)</span></label><br>
+            <from method="get">
+            <input type="password" id="password" placeholder="**** ****" maxlength="8" minlength="8" style="border: none; border-radius: 8px; height: 30px; width: 300px;" required><br><br><br>
+            </from>
+            <label>Confirm your password</label><br>
+            <from method="get">
+            <input type="password" id="confirmpassword" placeholder="**** ****" maxlength="8" minlength="8" style="border: none; border-radius: 8px; height: 30px; width: 300px;" required><br><br><br>
+            </from>
+            <from method="get">
+            <input type="checkbox" value="terms & Condition" required>I accept the <a href="#">terms of use</a> & <a href="#">privacy policy</a><br>
+            </from>
+            <form method="post">
+            <input type="submit" onclick="validation()" value="Sign up" style="height: 30px; width: 300px; border: none; border-radius: 8px; margin-top: 20px; cursor: pointer; background-color: #6B3442; color: white;">
+            </form>
+        </form>
+        <span>
+            <ul class="media">
+                <li class="fb"><a href="#"><i class="fa-brands fa-facebook-f" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color: blue; color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color: white; color: #de431f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color:blue; color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-apple" style="width: 30px; height: 30px; padding:5px; border-radius: 50px; background-color:white; color: black;"></i></a></li>
+            </ul>
+        </span>
+        <span class="signin">
+            <p style="color: wheat;">Already have an account?</p>
+            <a class="sin" href="file:///D:/HTML_Program/MyWebsite/signin.html">Login here</a>
+        </span>
+       </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+       <script>
+        function validation(){
+            
+            var pw1 = document.getElementById("password").value;  
+            var pw2 = document.getElementById("confirmpassword").value;  
+            if(pw1 != pw2)  
+            {   
+             alert("Oops!, something went wrong, please try agin");  
+            } else {  
+             alert("Thank You!, You are now a member");  
+            }
+        } 
+       </script>
+    </body>
+</html>
